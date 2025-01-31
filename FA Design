@@ -1,0 +1,11 @@
+// Full adder Design
+module FA (s,c,a,b,cin);
+  input a,b,cin;
+  output reg s,c;
+  
+  always@(a,b,cin)
+    begin
+      s=a^b^cin;
+      c=a&b|b&cin|cin&a;
+    end 
+endmodule
